@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -8,9 +10,19 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  id: number;
+
+  constructor(private route: ActivatedRoute, private router: Router) {
+    this.route.params.subscribe(res => {
+      this.id = res.id
+    });
+  }
 
   ngOnInit() {
+  }
+
+  sendMeHome() {
+    this.router.navigate(['']);
   }
 
 }
