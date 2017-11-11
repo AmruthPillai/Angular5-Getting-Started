@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<div class="container color-light">
+<div class="container color-light" [@goals]="goals.length">
   <div class="col">
     <p class="sm">Use this form to add new bucket list goals. What do you want to do in life?</p>
 
@@ -18,7 +18,7 @@
   </div>
 
   <div class="col">
-    <p class="life-goal" *ngFor="let goal of goals">
+    <p class="life-goal" *ngFor="let goal of goals; let i = index;" (click)="removeItem(i)">
       {{ goal }}
     </p>
   </div>
