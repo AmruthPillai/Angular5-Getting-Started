@@ -1,6 +1,12 @@
-# Angular5GettingStarted
+# Angular 5 - Getting Started
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+
+[Angular 5 - Getting Started - Demo Screenshot](screenshot.png?raw=true "Angular5-Getting-Started")
+
+## Live Demo
+
+You can play around with the live demo here: https://amruthpillai.github.io/Angular5-Getting-Started/
 
 ## Development server
 
