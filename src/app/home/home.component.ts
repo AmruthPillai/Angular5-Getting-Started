@@ -8,9 +8,21 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  itemCount: number;
+  btnText: string = 'Add an Item';
+  goalText: string = 'My First Life Goal';
+  goals = [];
+
   constructor() { }
 
   ngOnInit() {
+    this.itemCount = this.goals.length;
+  }
+
+  addItem() {
+    this.goals.push(this.goalText);
+    this.goalText = '';
+    this.itemCount = this.goals.length;
   }
 
 }
